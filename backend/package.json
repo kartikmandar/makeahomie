@@ -1,0 +1,26 @@
+{
+    "name": "make-a-homie-backend",
+    "version": "1.0.0",
+    "description": "Backend for Make a Homie app",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "csv-parse": "^5.6.0",
+        "express": "^4.18.2",
+        "natural": "^6.10.0",
+        "sequelize": "^6.37.1",
+        "sqlite3": "^5.1.7"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.0"
+    }
+}

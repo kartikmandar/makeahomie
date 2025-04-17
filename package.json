@@ -1,0 +1,23 @@
+{
+    "name": "makeahomie",
+    "version": "1.0.0",
+    "description": "Make a Homie App",
+    "scripts": {
+        "start": "node backend/server.js",
+        "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+        "install-backend": "cd backend && npm install",
+        "install-frontend": "cd frontend && npm install",
+        "install-all": "npm run install-backend && npm run install-frontend"
+    },
+    "keywords": [],
+    "author": "Kartik Mandar",
+    "license": "MIT",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "dependencies": {
+        "natural": "^8.0.1",
+        "sequelize": "^6.37.7",
+        "sqlite3": "^5.1.7"
+    }
+}
