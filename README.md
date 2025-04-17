@@ -13,6 +13,8 @@ Make a Homie is an innovative platform designed to connect like-minded individua
     - [Prerequisites](#prerequisites)
     - [Steps](#steps)
   - [Running the Application](#running-the-application)
+  - [Utility Scripts](#utility-scripts)
+    - [check\_users.js](#check_usersjs)
   - [Matching Algorithm](#matching-algorithm)
     - [Data Used for Matching](#data-used-for-matching)
     - [Algorithm Steps](#algorithm-steps)
@@ -126,6 +128,63 @@ makeahomie/
    cd frontend
    npm run build
    ```
+
+## Utility Scripts
+
+### check_users.js
+
+The `check_users.js` script is a utility tool that allows developers and administrators to inspect the contents of the database directly. It provides a quick way to debug and monitor the application data without needing to use external database management tools.
+
+**Functionality:**
+- Connects directly to the SQLite database file
+- Lists all users stored in the database with their key profile information
+- Shows all matches that have been generated
+- Displays match scores between users
+
+**How to run:**
+```bash
+node check_users.js
+```
+
+**Example output:**
+```
+Using database at: /path/to/makeahomie/backend/database.sqlite
+Database connection established successfully.
+
+Found 3 users in the database:
+
+--- User 1 ---
+UserID: user123
+Name: John Doe
+Department: Computer Science
+Join reason: Looking for study partners
+Combined text: present
+-------------------
+
+--- User 2 ---
+UserID: user456
+Name: Jane Smith
+Department: Engineering
+Join reason: Want to make friends
+Combined text: present
+-------------------
+
+Found 1 matches in the database:
+
+--- Match 1 ---
+User1: user123
+User2: user456
+Score: 0.78
+-------------------
+
+Database connection closed.
+```
+
+This script is particularly useful for:
+- Troubleshooting matching issues
+- Verifying user registration and profile creation
+- Checking if the matching algorithm is working properly
+- Data audit and quality control
 
 ## Matching Algorithm
 
